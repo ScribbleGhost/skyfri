@@ -1,0 +1,562 @@
+$MainTextColor: #000000;
+$MainTextColorDark: #E23333;
+$AccentColor1: #27B4A8;
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+ 	
+.site-title {
+	font-size: initial;
+	font-weight: normal;
+}
+
+.site-header {
+	padding: 1em;
+	box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+}
+
+.menu-toggle {
+	background-color: white;
+	border: solid 3px black;
+	font-size: 19px;
+	padding: 10px;
+	cursor: pointer;
+	margin-right: 0.5em;
+}
+
+.menu-toggle:hover {
+	border: solid 3px $AccentColor1;
+}
+
+
+.custom-site-header-image {
+	min-width: 100%;
+}
+
+.site-branding {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.custom-logo {
+	max-height: auto;
+	max-width: 50px;
+}
+
+.custom-logo-link {
+	line-height: 0;
+}
+
+.site-description {
+	display: block;
+	margin: 0;
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+# Fancy stuff
+--------------------------------------------------------------*/
+
+::selection {
+  background: #ffff99;
+}
+
+/*--------------------------------------------------------------
+# Navigation / Sidebar
+--------------------------------------------------------------*/
+
+.nav-links {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	font-family: "Heebo",sans-serif;
+	font-weight: 400;
+	font-size: 19px;
+}
+
+.nav-previous, .nav-next {
+	flex-grow: 1;
+}
+
+.nav-previous a, .nav-next a {
+	background-color: white;
+	border-radius: 3px;
+	border: solid 3px black;
+	box-shadow: 3px 3px 0px #888888;
+	cursor: pointer;
+	font-size: 19px;
+	margin-right: 0.5em;
+	padding: 10px;
+}
+
+.nav-previous a:hover, .nav-next a:hover {
+	border: solid 3px $AccentColor1;
+}
+
+
+.nav-next {
+	text-align: right;
+}
+
+/*--------------------------------------------------------------
+# Article / Site
+--------------------------------------------------------------*/
+
+.section-inner {
+	max-width: 100%;
+	margin: 0 auto;
+	max-width: 1300px;
+}
+
+.single-width {
+	max-width: 100%;
+	margin: 0 auto;
+	max-width: 600px;
+}
+
+.site-content {
+	padding-top: 1em;
+}
+
+@media only screen and (min-width: 600px) {
+	.entry-content {
+		padding-top: 2em;
+	}
+}
+
+.post-thumbnail {
+	max-width: 800px;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Media & Embeds
+--------------------------------------------------------------*/
+
+figure.alignwide {
+	max-width: 65%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*Support for wide blocks in WordPress Gutenberg*/
+/*https://richtabor.com/gutenberg-image-alignments/*/
+.section-inner,
+.entry-content > *:not( .alignwide ):not( .alignfull ),
+.entry-header,
+.widget-area,
+.comments-area,
+.entry-footer,
+.post-navigation, {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 630px;
+}
+
+.section-inner-large {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1200px;
+}
+
+.wp-block-image {
+	text-align: center;
+}
+
+.wp-block-image .size-full {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+a { color: $MainTextColor; text-decoration: none; }
+a:visited { color: $MainTextColor; }
+a:hover, a:focus, a:active { color: $MainTextColor; }
+a:focus { outline: thin dotted; }
+a:hover, a:active { outline: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+	color: $MainTextColor;
+	font-family: "Heebo",sans-serif;
+	font-weight: 800;
+	line-height: 1.25;
+}
+
+h1 { font-size: 55px; }
+
+body {
+	font-family: 'Lora', serif;
+	color: $MainTextColor;
+	line-height: 1.8;
+	font-size: 19px;
+}
+
+@media screen and (max-width: 1000px) {
+	.site-header {
+		padding: 0.5em;
+	}
+}
+
+code {
+	background-color: #F2F2F2;
+}
+
+pre {
+	background-color: #F2F2F2;
+	color: black;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# Responsive media embeds....  Not completely working...
+--------------------------------------------------------------*/
+
+figure.wp-block-embed.is-type-video.alignfull {
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-bottom: 56.25%; /*16:9*/
+}
+figure.wp-block-embed.is-type-video.alignfull iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# Pushy (sidebar)
+--------------------------------------------------------------*/
+
+/*Slightly modified code of Pushy 1.3.0 by Christopher Yee
+https://github.com/christophery/pushy/*/
+
+/*Menu Appearance*/
+
+.pushy {
+	position: fixed;
+	width: 350px;
+	height: 100%;
+	top: 0;
+	z-index: 9999;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	/*enables momentum scrolling in iOS overflow elements*/
+}
+
+.pushy.pushy-left {
+	left: 0;
+}
+
+.pushy-content {
+	visibility: hidden;
+}
+
+/*Menu Movement*/
+.pushy-left {
+	-webkit-transform: translate3d(-350px, 0, 0);
+	-ms-transform: translate3d(-350px, 0, 0);
+	transform: translate3d(-350px, 0, 0);
+}
+
+.pushy-open-left #content,
+.pushy-open-left .push {
+	-webkit-transform: translate3d(350px, 0, 0);
+	-ms-transform: translate3d(350px, 0, 0);
+	transform: translate3d(350px, 0, 0);
+}
+
+.pushy-open-left .pushy {
+	-webkit-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+.pushy-open-left .pushy-content {
+	visibility: visible;
+}
+
+/*Menu Transitions*/
+#content,
+.pushy,
+.push {
+	transition: transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+}
+
+.pushy-content {
+	transition: visibility 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+}
+
+/*Site Overlay*/
+html .pushy-open-left {
+	overflow-x: hidden;
+}
+
+.pushy-open-left .site-overlay {
+	display: block;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 9998;
+	background-color: rgba(0, 0, 0, 0.5);
+	-webkit-animation: fade 500ms;
+	animation: fade 500ms;
+}
+
+/*Fix for wpadminbar covering the menu*/
+body.logged-in .pushy-left {
+	margin-top: 32px !important;
+}
+
+/*Responsive fix for wpadminbar covering the menu*/
+@media screen and (max-width: 782px) {
+	body.logged-in .pushy-left {
+		margin-top: 46px !important;
+	}
+}
+
+/*Usually the wp adminbar is turned absolute
+on small screens. Let's avoid that when we are using pushy*/
+@media screen and (max-width: 600px) {
+	#wpadminbar {
+		position: fixed !important;
+	}
+}
+
+@keyframes fade {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@-webkit-keyframes fade {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# Loop
+--------------------------------------------------------------*/
+
+.container {
+	max-width: 100%;
+	margin: 0 auto;
+	background-color: whitesmoke;
+	max-width: 1300px;
+}
+
+.flex-row {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	overflow: hidden;
+}
+
+.infinite-wrap {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	overflow: hidden;
+}
+
+.flex-item {
+	flex-basis: 25%;
+	width: 300px;
+	position: relative;
+	box-sizing: border-box;
+	border: dashed 1px navy;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	word-break: break-word;
+	-webkit-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+	padding: 1em;
+}
+
+.flex-item a.flex-permalink {
+	text-decoration: none;
+	color: black;
+	display: block;
+	background-color: lightblue;
+	height: 100%;
+}
+
+.flex-item img { width: 100%;}
+
+.flex-item h1 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.5em;
+	font-weight: 500;
+	margin: 0;
+	padding: 1em;
+}
+
+/*4 columns*/
+@media(max-width:1300px){.flex-item{flex-basis:25%;}}
+
+/*3 columns*/
+@media(max-width:1000px){.flex-item{flex-basis:33.33%;}}
+
+/*2 columns*/
+@media(max-width:700px){.flex-item{flex-basis:50%;}}
+
+/*1 column*/
+@media(max-width:500px){.flex-item{flex-basis:100%;}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# Dark mode
+--------------------------------------------------------------*/
+
+@media screen and (prefers-color-scheme: dark) {
+	body {
+		background-color: #17181c;
+		color: #7f7d82;
+	}
+
+	a { color: #7f7d82; text-decoration: none; }
+	a:visited { color: #7f7d82; }
+	a:hover, a:focus, a:active { color: #7f7d82; }
+	a:focus { outline: thin dotted; }
+	a:hover, a:active { outline: 0; }
+
+	h1, h2, h3, h4, h5, h6 {
+		color: #a39eac;
+	}
+}
